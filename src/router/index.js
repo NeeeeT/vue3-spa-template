@@ -1,19 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+//引入views頁面的.vue檔案供router設置渲染路徑
+import Index from "@/views/Index.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/', //網址domain後的router設定，此處即為https:{domain}/
+    name: 'Index',
+    component: Index,
   }
 ]
 
